@@ -1,5 +1,6 @@
-from device import Device, DeviceStatus, INetworkable, Optional
-class computer(Device, INetworkable):
+from device import Device, DeviceStatus, INetworkable
+from typing import Optional
+class Computer(Device, INetworkable):
     def __init__(
         self,
         device_id: str,

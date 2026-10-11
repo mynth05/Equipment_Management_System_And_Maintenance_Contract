@@ -1,5 +1,5 @@
 from device import Device, DeviceStatus, INetworkable, Optional
-class printer(Device):
+class Printer(Device):
     def __init__(
         self,
         device_id: str,
@@ -23,7 +23,7 @@ class printer(Device):
             cost += 300_000
         return cost
 
-class NetworkPrinter(printer, INetworkable):
+class NetworkPrinter(Printer, INetworkable):
     def __init__(
         self,
         device_id: str,
