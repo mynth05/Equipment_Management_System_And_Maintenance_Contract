@@ -43,8 +43,3 @@ class Computer(Device, INetworkable):
         if self.get_years_in_use() > 5:
             cost += 0.01 * self.purchase_price
         return cost
-
-        
-
-
-        

@@ -36,6 +36,17 @@ if __name__ == "__main__":
     except ValueError as e:
         print(f"[Bắt ngoại lệ trùng mã]: {e}\n")
 
+    #3. In danh sách thiết bị trong một phòng 
+    print(f"Danh sách thiết bị phòng {lab1.room_id}")
+    for k, device in enumerate(lab1.devices,start =1):
+        print(f"{k}. {device.name}")
+    print
+
+    print(f"Danh sách thiết bị phòng {lab2.room_id}")
+    for k, device in enumerate(lab1.devices,start =1):
+        print(f"{k}. {device.name}")
+    print
+    
     # 4. In thông tin và tổng chi phí bảo trì từng phòng
     for room in [lab1, lab2]:
         print(f"=== {room.room_name} ({room.room_id}) ===")
@@ -49,7 +60,7 @@ if __name__ == "__main__":
         print(f"* {d.name} (Mã: {d.device_id}, Năm SD: {d.year_of_use})")
     print()
 
-    # 6. Kết nối mạng và duyệt danh sách qua interface INetworkable
+    # 6 + 7. Kết nối mạng và duyệt danh sách qua interface INetworkable
     network_devices: List[INetworkable] = [computer1, computer2, printer2]
 
     computer1.connect("192.168.1.10")
